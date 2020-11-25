@@ -1,0 +1,73 @@
+/* Code tidied up by ScrapBook */
+.button, .header .logo, .title { display: inline-block; }
+.button { background-color: rgb(246, 92, 68); padding: 15px; font-size: 25px; border-radius: 3px; color: rgb(255, 255, 255); cursor: pointer; margin: 0px; }
+.button:hover { color: rgb(0, 0, 0); }
+.recipes { border: 2px solid rgb(225, 225, 225); background-color: rgb(255, 255, 255); padding: 10px; }
+a, abbr, acronym, address, applet, b, big, blockquote, body, caption, center, cite, code, dd, del, dfn, div, dl, dt, em, fieldset, font, form, h1, h2, h3, h4, h5, h6, html, i, iframe, img, ins, kbd, label, legend, object, p, pre, q, s, samp, small, span, strike, strong, sub, sup, table, tbody, td, tfoot, th, thead, tr, tt, u, var { margin: 0px; padding: 0px; border: 0px none; outline: 0px none; font-size: 100%; vertical-align: top; background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%; }
+.content, .header { border-radius: 10px; box-shadow: 0px 0px 10px rgb(51, 51, 51); }
+body { line-height: 1; background: rgb(231, 231, 231) none repeat scroll 0% 0%; font-family: "PT Sans",sans-serif; font-size: 62.5%; }
+.sidebar, .text { line-height: 1.2; }
+img, table { max-width: 100%; }
+a { color: rgb(18, 35, 204); }
+a:hover { text-decoration: none; }
+.container { max-width: 990px; position: relative; margin: 0px auto; width: 100%; }
+.header { background-color: rgb(255, 255, 255); position: relative; margin-top: 20px; box-shadow: 0px 0px 10px rgb(51, 51, 51); }
+.header .logo::before { content: url("heart.jpg"); margin-left: 10px; }
+.title a { text-decoration: none !important; font-family: "Times New Roman",serif; color: rgb(0, 96, 188); }
+.title a h1 { font-size: 48px; font-style: italic; text-transform: uppercase; padding-top: 10px; }
+.title a h3 { font-size: 24px; }
+.title .red_title { color: rgb(255, 31, 50); }
+.header img { padding: 5px 20px 0px; box-sizing: border-box; }
+.header .clock { position: absolute; right: 31px; top: 31px; }
+.header .date-now { position: absolute; right: 38px; top: 5px; font-weight: 700; font-size: 15px; }
+.content { background: rgb(255, 255, 255) none repeat scroll 0% 0%; margin: 0px 0px 15px; overflow: hidden; padding: 20px 10px; box-shadow: 0px 0px 10px rgb(51, 51, 51); }
+.product { width: 100%; max-width: 100px; }
+.sidebar { float: right; font-size: 14px; position: relative; top: -95px; }
+.itemfirst { width: 249px; padding: 12px; background: rgb(241, 241, 241) none repeat scroll 0% 0%; border: 1px solid rgb(225, 225, 225); float: left; }
+.sidebar .author { overflow: hidden; padding: 0px 0px 15px; }
+.sidebar .author h3 { margin: 0px; text-decoration: underline; }
+.sidebar .author img { float: right; }
+.sidebar .author ul { position: relative; top: 21px; margin: 0px; font-weight: 700; padding: 0px 0px 0px 15px; overflow: hidden; }
+.text { width: 655px; float: left; font-size: 15px; text-align: justify; padding: 0px 15px 0px 0px; }
+#commentform, .content h1 { text-align: left; }
+.content h1 { font-size: 33px; width: 655px; margin: 0px 0px 25px; }
+.content h2 { font-size: 27px; margin: 25px 0px 10px; }
+.content h3 { font-size: 17px; margin: 15px 0px 10px; }
+.content p { margin: 0px 0px 15px; text-indent: 15px; }
+.content img { margin: 10px 0px; }
+#comments .descrip, .footer { margin: 0px 0px 25px; }
+#comments h1 { color: rgb(204, 0, 0); }
+#comments .descrip .d2 { color: rgb(136, 136, 136); }
+#comments small { font-size: 12px; }
+.comment { padding: 15px 0px; border-top: 1px solid rgb(232, 232, 232); }
+.comment .text1 { font-size: 14px; font-weight: 700; }
+.comment .text2 { font-size: 12px; float: right; color: rgb(136, 136, 136); }
+.comment .text3 { font-size: 13px; padding: 10px 0px 0px; text-indent: 15px; }
+.footer { background: rgb(255, 255, 255) none repeat scroll 0% 0%; border-radius: 10px; padding: 15px; font-size: 12px; color: rgb(119, 119, 119); box-shadow: 0px 0px 10px rgb(51, 51, 51); }
+.for_img { text-align: center; text-indent: 0px; }
+.flleft { float: left; width: 303px; overflow: hidden; }
+.firebugResetStyles { z-index: 2147483646 !important; top: 0px !important; left: 0px !important; display: block !important; border: 0px none !important; margin: 0px !important; padding: 0px !important; outline: 0px none !important; min-width: 0px !important; max-width: none !important; min-height: 0px !important; max-height: none !important; position: fixed !important; transform: rotate(0deg) !important; transform-origin: 50% 50% 0px !important; border-radius: 0px !important; box-shadow: none !important; background: rgba(0, 0, 0, 0) none repeat scroll 0% 0% !important; pointer-events: none !important; white-space: normal !important; }
+style.firebugResetStyles { display: none !important; }
+.firebugResetStyles::after, .firebugResetStyles::before { content: "" !important; }
+.pack { float: left; max-width: 250px; }
+img { max-width: 100%; }
+@media screen and (max-width: 1024px) {
+  .content h1, .itemfirst, .text { width: 100%; }
+  .pack, .sidebar, .text { float: none; }
+  .sidebar { top: 0px; }
+  .itemfirst { padding: 0px; }
+  .pack { max-width: 40%; }
+}
+@media screen and (max-width: 600px) {
+  .content h1, .title a h1 { font-size: 25px; }
+  .title a h3 { font-size: 15px; }
+}
+@media screen and (max-width: 480px) {
+  .pack { max-width: 90%; }
+}
+@media screen and (max-width: 400px) {
+  .header .logo::before { content: ""; }
+  .title { padding-bottom: 15px; padding-left: 20px; }
+}
+.clear { clear: both; }
+.comment .text1 { cursor: pointer; }

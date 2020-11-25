@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+   <title>Varydex</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link href="favicon.png" rel="shortcut icon" type="image/x-icon">  
+   <link rel="stylesheet" href="main.css">
+   <style>
+/* Code tidied up by ScrapBook */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Roboto Light"), local("Roboto-Light"), url("KFOlCnqEu92Fr1MmSU5fCRc4EsA.woff2") format("woff2");
+  unicode-range: U+460-52F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Roboto Light"), local("Roboto-Light"), url("KFOlCnqEu92Fr1MmSU5fABc4EsA.woff2") format("woff2");
+  unicode-range: U+400-45F, U+490-491, U+4B0-4B1, U+2116;
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Roboto Light"), local("Roboto-Light"), url("KFOlCnqEu92Fr1MmSU5fCBc4EsA.woff2") format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Roboto Light"), local("Roboto-Light"), url("KFOlCnqEu92Fr1MmSU5fBxc4EsA.woff2") format("woff2");
+  unicode-range: U+370-3FF;
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Roboto Light"), local("Roboto-Light"), url("KFOlCnqEu92Fr1MmSU5fCxc4EsA.woff2") format("woff2");
+  unicode-range: U+102-103, U+110-111, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Roboto Light"), local("Roboto-Light"), url("KFOlCnqEu92Fr1MmSU5fChc4EsA.woff2") format("woff2");
+  unicode-range: U+100-24F, U+259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Roboto Light"), local("Roboto-Light"), url("KFOlCnqEu92Fr1MmSU5fBBc4.woff2") format("woff2");
+  unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto"), local("Roboto-Regular"), url("KFOmCnqEu92Fr1Mu72xKOzY.woff2") format("woff2");
+  unicode-range: U+460-52F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto"), local("Roboto-Regular"), url("KFOmCnqEu92Fr1Mu5mxKOzY.woff2") format("woff2");
+  unicode-range: U+400-45F, U+490-491, U+4B0-4B1, U+2116;
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto"), local("Roboto-Regular"), url("KFOmCnqEu92Fr1Mu7mxKOzY.woff2") format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto"), local("Roboto-Regular"), url("KFOmCnqEu92Fr1Mu4WxKOzY.woff2") format("woff2");
+  unicode-range: U+370-3FF;
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto"), local("Roboto-Regular"), url("KFOmCnqEu92Fr1Mu7WxKOzY.woff2") format("woff2");
+  unicode-range: U+102-103, U+110-111, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto"), local("Roboto-Regular"), url("KFOmCnqEu92Fr1Mu7GxKOzY.woff2") format("woff2");
+  unicode-range: U+100-24F, U+259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto"), local("Roboto-Regular"), url("KFOmCnqEu92Fr1Mu4mxK.woff2") format("woff2");
+  unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Roboto Medium"), local("Roboto-Medium"), url("KFOlCnqEu92Fr1MmEU9fCRc4EsA.woff2") format("woff2");
+  unicode-range: U+460-52F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Roboto Medium"), local("Roboto-Medium"), url("KFOlCnqEu92Fr1MmEU9fABc4EsA.woff2") format("woff2");
+  unicode-range: U+400-45F, U+490-491, U+4B0-4B1, U+2116;
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Roboto Medium"), local("Roboto-Medium"), url("KFOlCnqEu92Fr1MmEU9fCBc4EsA.woff2") format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Roboto Medium"), local("Roboto-Medium"), url("KFOlCnqEu92Fr1MmEU9fBxc4EsA.woff2") format("woff2");
+  unicode-range: U+370-3FF;
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Roboto Medium"), local("Roboto-Medium"), url("KFOlCnqEu92Fr1MmEU9fCxc4EsA.woff2") format("woff2");
+  unicode-range: U+102-103, U+110-111, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Roboto Medium"), local("Roboto-Medium"), url("KFOlCnqEu92Fr1MmEU9fChc4EsA.woff2") format("woff2");
+  unicode-range: U+100-24F, U+259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Roboto Medium"), local("Roboto-Medium"), url("KFOlCnqEu92Fr1MmEU9fBBc4.woff2") format("woff2");
+  unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Roboto Bold"), local("Roboto-Bold"), url("KFOlCnqEu92Fr1MmWUlfCRc4EsA.woff2") format("woff2");
+  unicode-range: U+460-52F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Roboto Bold"), local("Roboto-Bold"), url("KFOlCnqEu92Fr1MmWUlfABc4EsA.woff2") format("woff2");
+  unicode-range: U+400-45F, U+490-491, U+4B0-4B1, U+2116;
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Roboto Bold"), local("Roboto-Bold"), url("KFOlCnqEu92Fr1MmWUlfCBc4EsA.woff2") format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Roboto Bold"), local("Roboto-Bold"), url("KFOlCnqEu92Fr1MmWUlfBxc4EsA.woff2") format("woff2");
+  unicode-range: U+370-3FF;
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Roboto Bold"), local("Roboto-Bold"), url("KFOlCnqEu92Fr1MmWUlfCxc4EsA.woff2") format("woff2");
+  unicode-range: U+102-103, U+110-111, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Roboto Bold"), local("Roboto-Bold"), url("KFOlCnqEu92Fr1MmWUlfChc4EsA.woff2") format("woff2");
+  unicode-range: U+100-24F, U+259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Roboto Bold"), local("Roboto-Bold"), url("KFOlCnqEu92Fr1MmWUlfBBc4.woff2") format("woff2");
+  unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  src: local("Roboto Black"), local("Roboto-Black"), url("KFOlCnqEu92Fr1MmYUtfCRc4EsA.woff2") format("woff2");
+  unicode-range: U+460-52F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  src: local("Roboto Black"), local("Roboto-Black"), url("KFOlCnqEu92Fr1MmYUtfABc4EsA.woff2") format("woff2");
+  unicode-range: U+400-45F, U+490-491, U+4B0-4B1, U+2116;
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  src: local("Roboto Black"), local("Roboto-Black"), url("KFOlCnqEu92Fr1MmYUtfCBc4EsA.woff2") format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  src: local("Roboto Black"), local("Roboto-Black"), url("KFOlCnqEu92Fr1MmYUtfBxc4EsA.woff2") format("woff2");
+  unicode-range: U+370-3FF;
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  src: local("Roboto Black"), local("Roboto-Black"), url("KFOlCnqEu92Fr1MmYUtfCxc4EsA.woff2") format("woff2");
+  unicode-range: U+102-103, U+110-111, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  src: local("Roboto Black"), local("Roboto-Black"), url("KFOlCnqEu92Fr1MmYUtfChc4EsA.woff2") format("woff2");
+  unicode-range: U+100-24F, U+259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  src: local("Roboto Black"), local("Roboto-Black"), url("KFOlCnqEu92Fr1MmYUtfBBc4.woff2") format("woff2");
+  unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+   <style>
+/* Code tidied up by ScrapBook */
+.callBack { display: none !important; }
+.footer { background: rgb(255, 222, 243) none repeat scroll 0% 0% !important; color: rgb(197, 32, 135) !important; padding-top: 100px !important; margin-top: -50px !important; }
+</style>
+   <script type="text/javascript" async="" src="analytics.js"></script><script src="jquery.js"></script><script type="text/javascript" src="9899.js" async=""></script><script type="text/javascript" src="js.dat" async=""></script>
+<script type="text/javascript" src="script_land.js" defer=""></script><script type="text/javascript" src="_.dat"></script><script type="text/javascript" src="script_footer.js"></script>
+<!-- Global site tag (gtag.js) - Google Ads: 569182617 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-569182617"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-569182617');
+</script>
+
+</head>
+<body style="overflow: visible;"><div class="blockRedLine3103" style="color: rgb(255, 255, 255); background: red none repeat scroll 0% 0%; box-sizing: border-box; font-family: Arial,Helvetica,sans-serif; font-style: normal; font-variant: normal; text-transform: none; position: relative; z-index: 1000000; padding: 0px; margin: 0px;"><div style="margin: 0px auto; padding: 10px; max-width: 1200px; width: 100%; display: flex; justify-content: center; align-items: center; box-sizing: border-box;"><div class="blockRedLine3103__image" style="flex-shrink: 0; box-sizing: border-box; padding: 0px; margin: 0px;"><div style="width: 65px; height: 5px; border-radius: 2px; background: rgba(255, 255, 255, 0.3) none repeat scroll 0% 0%; margin: 0px 0px 10px; box-sizing: border-box;"></div><div style="width: 65px; height: 5px; border-radius: 2px; background: rgba(255, 255, 255, 0.3) none repeat scroll 0% 0%; margin: 0px 0px 10px 20px; box-sizing: border-box;"></div><div style="width: 65px; height: 5px; border-radius: 2px; background: rgba(255, 255, 255, 0.3) none repeat scroll 0% 0%; margin: 0px 0px 0px 10px; box-sizing: border-box;"></div></div><img class="blockRedLine3103__image" style="flex-shrink: 0; box-sizing: border-box; width: 60px; height: auto; margin: 0px; padding: 0px;" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI0LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCA0NS40IDM3LjgiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ1LjQgMzcuODsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOiNGRkZGRkY7fQoJLnN0MXtmaWxsOiMwMEE2NTE7fQo8L3N0eWxlPgo8Zz4KCTxnPgoJCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0xNS45LDI5LjNjLTIuNCwwLTQuMywxLjktNC4zLDQuM3MxLjksNC4zLDQuMyw0LjNjMi40LDAsNC4zLTEuOSw0LjMtNC4zUzE4LjMsMjkuMywxNS45LDI5LjN6IE0xNS45LDM1LjIKCQkJYy0wLjksMC0xLjctMC43LTEuNy0xLjdzMC43LTEuNywxLjctMS43YzAuOSwwLDEuNywwLjcsMS43LDEuN1MxNi44LDM1LjIsMTUuOSwzNS4yeiIvPgoJCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0zNS40LDI5LjNjLTIuNCwwLTQuMywxLjktNC4zLDQuM3MxLjksNC4zLDQuMyw0LjNjMi40LDAsNC4zLTEuOSw0LjMtNC4zUzM3LjgsMjkuMywzNS40LDI5LjN6IE0zNS40LDM1LjIKCQkJYy0wLjksMC0xLjctMC43LTEuNy0xLjdzMC43LTEuNywxLjctMS43YzAuOSwwLDEuNywwLjcsMS43LDEuN1MzNi40LDM1LjIsMzUuNCwzNS4yeiIvPgoJCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0zLjQsMzIuNGg3LjNjMC4yLTEsMC43LTEuOCwxLjMtMi41SDMuNFYzMi40eiIvPgoJCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik00My44LDI5Ljl2LTguN2wtNi05LjdoLTkuN3YxOC4zaC04LjNjMC43LDAuNywxLjEsMS41LDEuMywyLjVoOS4yYzAuNS0yLjQsMi42LTQuMiw1LjItNC4yczQuNywxLjgsNS4yLDQuMgoJCQloNC44di0yLjVINDMuOHogTTMxLDIwLjF2LTUuN2g0LjVsNCw1LjdIMzF6Ii8+CgkJPHBhdGggY2xhc3M9InN0MCIgZD0iTTE3LjMsOGMwLDEuMSwwLDIuMiwwLDMuNGMwLDcuNC05LjMsMTAuMi05LjMsMTAuMnMtMS41LDAtMywwdjYuNGgyMS40VjhIMTcuM3oiLz4KCTwvZz4KCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0xNS43LDMuNEMxMi40LDMuNCw5LjYsMiw4LjYsMEg3LjFDNi4xLDIsMy4zLDMuNCwwLDMuNGMwLDIuMSwwLDUsMCw3LjdjMCw1LjQsOCw4LjUsOCw4LjVzNy43LTIuMyw3LjctOC41CgkJQzE1LjgsOC4xLDE1LjgsNS40LDE1LjcsMy40QzE1LjcsMy40LDE1LjcsMy40LDE1LjcsMy40eiIvPgoJPHBhdGggY2xhc3M9InN0MSIgZD0iTTE0LjUsNC40Yy0yLjgsMC01LjEtMS4yLTYtMi45SDcuM0M2LjQsMy4yLDQsNC40LDEuMyw0LjRjMCwxLjgsMCw0LjIsMCw2LjZjMCw0LjYsNi43LDcuMiw2LjcsNy4yCgkJczYuNS0yLDYuNS03LjJDMTQuNSw4LjQsMTQuNSw2LjEsMTQuNSw0LjRDMTQuNSw0LjQsMTQuNSw0LjQsMTQuNSw0LjR6Ii8+Cgk8Zz4KCQk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNNy4zLDEyLjJDNy4zLDEyLjIsNy4yLDEyLjIsNy4zLDEyLjJjLTAuMiwwLTAuNC0wLjEtMC42LTAuMkw0LjgsOS44Yy0wLjMtMC4zLTAuMy0wLjgsMC0xLjEKCQkJYzAuMy0wLjMsMC44LTAuMywxLjEsMGwxLjQsMS41bDIuNi0yLjdjMC4zLTAuMywwLjgtMC4zLDEuMSwwYzAuMywwLjMsMC4zLDAuOCwwLDEuMWwtMy4yLDMuM0M3LjcsMTIuMSw3LjUsMTIuMiw3LjMsMTIuMnoiLz4KCTwvZz4KPC9nPgo8L3N2Zz4K"><div style="text-align: center; box-sizing: border-box; padding: 0px 5px; margin: 0px; line-height: 1.15;"><div style="font-size: 16px; font-weight: bold; padding: 0px; margin: 0px 0px 5px; box-sizing: border-box;">BEZPIECZNA DOSTAWA! Nie martw się! Poważnie podchodzimy do bezpieczeństwa naszych klientów!</div><div style="font-size: 15px; font-weight: normal; padding: 0px; margin: 0px; box-sizing: border-box;">Nasi kurierzy zmieniają maseczki i rękawiczki co dwie godziny. Proces dostawy i płatności odbywa się bez bezpośredniego kontaktu.</div></div><div class="blockRedLine3103__image" style="flex-shrink: 0; box-sizing: border-box; padding: 0px; margin: 0px;"><div style="width: 65px; height: 5px; border-radius: 2px; background: rgba(255, 255, 255, 0.3) none repeat scroll 0% 0%; margin: 0px 0px 10px; box-sizing: border-box;"></div><div style="width: 65px; height: 5px; border-radius: 2px; background: rgba(255, 255, 255, 0.3) none repeat scroll 0% 0%; margin: 0px 0px 10px 20px; box-sizing: border-box;"></div><div style="width: 65px; height: 5px; border-radius: 2px; background: rgba(255, 255, 255, 0.3) none repeat scroll 0% 0%; margin: 0px 0px 0px 10px; box-sizing: border-box;"></div></div></div></div>
+    <div class="show-btn" id="js-red-btn">
+           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 45" style="enable-background:new 0 0 45 45;" xml:space="preserve">
+           <circle style="fill: rgb(255, 4, 4);" cx="22.5" cy="22.5" r="22.5"></circle>
+           <polygon style="fill: rgb(255, 255, 255);" points="28,12.1 13,22 28,32 "></polygon>
+       </svg>
+   </div>
+    <!-- HurryUp block -->
+       
+   <!-- END: HurryUp block -->
+   <div class="navbar">
+   	<div class="navbar-contain container">
+   		<a href="#prime" class="navbar-logo js-link"><span class="navbar-logo__ico"></span></a>
+   		<ul id="fixed-nav" class="navbar-menu" style="">
+   			<li class="navbar__item"><a class="js-link" href="#prime">Strona główna </a></li>
+   			<li class="navbar__item"><a class="js-link" href="#telephone">Konsultacja </a></li>
+   			<li class="navbar__item"><a class="js-link" href="#comments">Opinie</a></li>
+   		</ul>
+   		<a href="#order-form" class="navbar__button button-wrap button-wrap_sm js-to-form"><span class="button button_sm">ZAMÓWIĆ ZE ZNIŻKĄ<i class="arrow"></i></span></a>
+   	</div>
+   </div>
+   <section class="prime" id="prime">
+   	<div class="prime__top">
+   		<div class="container prime-wrap">
+   			<div class="prime-left">
+   				<div class="prime-left__top">NEW Formula</div>
+   				<h2 class="prime-title">
+   					Varydex<br><span> przywróci lekkość Twoim nogom </span>
+   				</h2>
+   				<div class="prime-list">
+   					<ul>
+   						<li class="prime-list__item">
+   							Zmniejsza ból i dyskomfort
+   						</li>
+   						<li class="prime-list__item">
+   							Normalizuje strukturę żylnych ścianek
+   						</li>
+   						<li class="prime-list__item prime-list__item-last">
+   							Zapobiega powikłaniom żylaków
+   						</li>
+   					</ul>
+   					<div class="prime-icons">
+   						<i class="prime-ico1 icon svg-ico1"></i>
+   						<i class="prime-ico2 icon svg-ico2"></i>
+   						<i class="prime-ico3 icon svg-ico3"></i>
+   					</div>
+   				</div>
+   				<img class="prime__img" src="product.png" alt="product" width="120">
+   			</div>
+   			<div class="prime-counter">
+   				<div class="container">
+   					<span class="prime-counter__text">
+   						Pospiesz się! Ograniczona oferta
+   					</span>
+   					<div class="counter js-countdown">
+   						<span class="counter__elem counter__elem1 js-count-digit">0</span>
+   						<span class="counter__elem js-count-digit">8</span>
+   						<span class="counter__elem js-count-digit">3</span>
+   					</div>
+   				</div>
+   			</div>	
+   			<div class="prime-right">
+   				<div class="timer">
+   					<span class="timer__title">
+   						Do końca promocji pozostało
+   					</span>
+   					<div class="timer-wrap">
+   						<div class="timer__item hours">15</div>&nbsp;:&nbsp;<div class="timer__item minutes">59</div>&nbsp;:&nbsp;<div class="timer__item seconds">39</div> 
+   					</div>
+   				</div>
+   				<div class="order-wrap">
+   					<div id="order-form1" class="order">
+   						<div class="order-head">
+   						<div class="discount"></div>
+   						<div class="price bb">
+   							<div class="price__old  price__old-crossed">
+                  <span class="al-raw-cost-promo price__old-cost">318</span>
+                  <span class="al-raw-currency price__old-currency">zł</span>
+                </div>
+                <div class="price__new">
+                  <span class="al-raw-cost price__new-cost">159</span>
+                  <span class="al-raw-currency price__new-currency">zł</span>
+                </div>
+   						</div>
+   						<h4 class="order__title">WYPEŁNIJ FORMULARZ, A MY SKONTAKTUJEMY SIĘ Z TOBĄ!</h4>
+   						</div>
+   						<iframe style="width: 100%; height: 252px; border:0;" id="order_form" src="https://ketonisa.site"></iframe>
+   					</div>
+   				</div>
+   			</div>
+   		</div>
+   	</div>
+   	<div class="prime__bottom"></div>
+   <div class="hurryUp" id="hurryUp">
+           <span class="hurryUp__close"></span>
+           <div class="hurryUp-left hurryUp__text">
+               Wykorzystaj unikalną możliwość kupienia
+               <b>Varydex za najniższą cenę.</b>
+           </div>
+           <div class="hurryUp-right hurryUp__text">
+               <b class="hurryUp__text-bold">Pospiesz się!</b>
+               <span class="hurryUp__text-desc">Ograniczona oferta</span>       
+               <div class="counter js-countdown">
+                   <span class="counter__elem counter__elem1 js-count-digit">0</span>
+                   <span class="counter__elem js-count-digit">8</span>
+                   <span class="counter__elem js-count-digit">3</span>
+               </div>
+           </div>
+       </div></section>
+   <section class="tape">
+   	<div class="container">
+   		<ul class="tape-list">
+   			<li class="tape__item1">Łatwo i skutecznie</li>
+   			<li class="tape__item2">Bez bólu i dyskomfortu</li>
+   			<li class="tape__item3"> Bez operacji i rehabilitacji</li>
+   		</ul>
+   	</div>
+   </section>
+   <section class="feature">
+   	<div class="container feature-wrap">
+   		<div class="feature-left">
+   			<div class="feature__product">
+   				<img src="product.png" alt="" width="120">
+   			</div>
+   		</div>
+   		<div class="feature-right">
+   			<h3 class="feature__title">
+   				Co wyróżnia krem Varydex?
+   			</h3>
+   			<ul class="feature-list">
+   				<li class="feature__item">
+   					<h6>Alternatywa dla operacji</h6>
+   					<p>Odbudowuje organizm naturalną drogą niechirurgiczną</p>
+   				</li>
+   				<li class="feature__item">
+   					<h6>Złożone działanie</h6>
+   					<p>Ma wielopłaszczyznowy wpływ na żyły i skórę nóg</p>
+   				</li>
+   				<li class="feature__item">
+   					<h6>Do użytku domowego</h6>
+   					<p>Sprzedawany jest bez recepty i nie ma przeciwwskazań</p>
+   				</li>
+   				<li class="feature__item">
+   					<h6>Stabilny efekt</h6>
+   					<p>Krem zaczyna działać natychmiast, a pełny kurs ustala efekt</p>
+   				</li>
+   				<li class="feature__item">
+   					<h6> Bezpieczeństwo i ekologiczność</h6>
+   					<p>Naturalna kompozycja hipoalergiczna nie ma przeciwwskazań</p>
+   				</li>
+   			</ul>
+   		</div>
+   	</div>
+   </section>
+   <section class="varicose">
+   	<div class="container">
+   		<div class="varicose-title">
+   			<h3>
+   				Zatrzymaj żylaki!
+   			</h3>
+   			<p>
+   				Żylaki wymagają szybkiej pomocy, ponieważ nigdy nie mijają same z siebie, ale grożą rozwojem zakrzepicy.
+   			</p>
+   		</div>
+   	</div>
+   	<img src="varicose-img.png" alt="">	
+   </section>
+   <section class="expert">
+   	<div class="container expert-wrap">
+   		<div class="expert-left expert-block">
+   			<div class="expert-block__name">
+   				<span>
+   					<strong>Gabriela</strong>,<br>
+   					kurier, spędza na nogach <br>
+   					do 12 godzin dziennie
+   				</span>
+   			</div>
+   			<div class="expert-block__text">
+   				<h4>
+   					Dostępne dla wszystkich
+   				</h4>
+   				<p>“To wspaniałe, że Varydex można zamówić online! W nim, jak się okazało, jest wszystko, czego szukałam od dawna: obrzęki i stany zapalne żył, zmęczenie nóg minęły.”</p>
+   				<a href="#order-form" class="button js-to-form">ZAMÓWIĆ ZE ZNIŻKĄ<i class="arrow"></i></a>
+   			</div>
+   		</div>
+   		<div class="expert-right">
+   			<h3>
+   				Wybór profesjonalistów
+   			</h3>
+   			<p>
+   				“Odkąd Varydex raz na zawsze rozwiązał mój problem, polecam ten krem wszystkim! To niesamowite, że naukowcom udało się w jednym miejscu połączyć tak wiele terapeutycznych składników. Nadal go stosuję nawet po tym, jak przywróciłam zdrowie nogom, wyczerpanym baletem. Teraz jest dla mnie oczywiste, że lepiej nie zaniedbywać żylaków niż je usuwać.”
+   			</p>
+   			<div>
+   				<strong>Liya Sobolevskaya</strong>, <br>
+   				primabalerina Teatru Bolszoj
+   			</div>
+   		</div>
+   	</div>
+   </section>
+   <section class="telephone" id="telephone">
+   	<div class="container telephone-wrap">
+   		<div class="telephone-left">
+   			<div class="telephone-title">
+   				<h3>
+   					Uwaga!
+   				</h3>
+   				<p>
+   					<span>Zamów telefon od konsultanta</span>
+            w celu jak najbardziej skutecznego wykorzystania kremu
+   				</p>
+   			</div>
+   		</div>
+   		<div class="telephone-right">
+   			<div class="phone">
+   				<i class="phone__img"></i>
+   				<span class="phone__circle-internal"></span>
+   				<span class="phone__circle-external-1"></span>
+   				<span class="phone__circle-external-2"></span>
+   			</div>
+   		</div>
+   	</div>
+   	<img src="telephone-img.png" alt="">
+   </section>
+   <section class="comments" id="comments">
+   	<div class="container">
+   		<h3 class="comments__title">
+   			Recenzje o kremie Varydex
+   		</h3>
+   		<div class="comments-list" role="toolbar">
+   			
+   			
+   			
+   		<div class="comments__item1 comment" style="" tabindex="-1" role="option" aria-describedby="slick-slide00">
+   				<i class="comment__ico1"></i>
+   				<div class="comment-block">
+   					<h5>Izabela</h5>
+   					<p>Po porodzie pajączki naczyniowe na nogach zamieniły się w obrzydliwe, wypukłe żyły. Jestem wdzięczna Varydex, który przywrócił moim nogom ich były stan.</p>
+   				</div>
+   				<span class="comment__img1"></span>
+   			</div><div class="comments__item2 comment" style="" tabindex="-1" role="option" aria-describedby="slick-slide01">
+   				<i class="comment__ico2"></i>
+   				<div class="comment-block">
+   					<h5>Damian</h5>
+   					<p>Podczas gdy ignorowałem problemy żył na nogach, moja żona szukała sposobów, aby mi pomóc. W nic nie wierzyłem, ale Varydex usunął objawy żylaków!</p>
+   				</div>
+   				<span class="comment__img2"></span>
+   			</div><div class="comments__item3 comment" style="" tabindex="-1" role="option" aria-describedby="slick-slide02">
+   				<i class="comment__ico3"></i>
+   				<div class="comment-block">
+   					<h5>Katarzyna</h5>
+   					<p>Po długich spacerach zwykle miałam mrowienie w nogach. Byłam w rozpaczy, ale Varydex mi pomógł! Niesamowite. Teraz bardzo rzadko mam dyskomfort nóg.</p>
+   				</div>
+   				<i class="comment__img3"></i>
+   			</div></div>
+   	</div>
+   </section>
+   <section id="steps" class="steps">
+   	<div class="container">
+   		<h3 class="steps__title">
+   			4 proste kroki do życia bez żylaków
+   		</h3>
+   		<ul class="steps-list">
+   			<li class="steps-item steps-item-1">
+   				<i class="icon svg-step1"></i>
+   				<h5>Szybko</h5>
+   				<p>Wypełnij formularz na stronie internetowej</p>
+   			</li>
+   			<li class="steps-item steps-item-2">
+   				<i class="icon svg-step2"></i>
+   				<h5>Dogodnie</h5>
+   				<p>Nasz operator oddzwoni i uzgodni dostawę</p>
+   			</li>
+   			<li class="steps-item steps-item-3">
+   				<i class="icon svg-step3"></i>
+   				<h5>Bezpiecznie</h5>
+   				<p>Zapłać za towar tylko po otrzymaniu, bez ryzyka</p>
+   			</li>
+   			<li class="steps-item steps-item-4">
+   				<i class="icon svg-step4"></i>
+   				<h5>Skutecznie</h5>
+   				<p>Postępuj zgodnie z instrukcjami i wróć do życia bez żylaków</p>
+   			</li>
+   		</ul>
+   	</div>
+   </section>
+   <section class="prime" id="prime-bottom">
+   	<div class="prime__top">
+   		<div class="container prime-wrap">
+   			<div class="prime-left">
+   				<div class="prime-left__top">NEW Formula</div>
+   				<h2 class="prime-title">
+   					Varydex<br><span> przywróci lekkość Twoim nogom</span>
+   				</h2>
+   				<div class="prime-list">
+   					<ul>
+   						<li class="prime-list__item">
+   							Zmniejsza ból i dyskomfort
+   						</li>
+   						<li class="prime-list__item">
+   							Normalizuje strukturę żylnych ścianek
+   						</li>
+   						<li class="prime-list__item prime-list__item-last">
+   							Zapobiega powikłaniom żylaków
+   						</li>
+   					</ul>
+   					<div class="prime-icons">
+   						<i class="prime-ico1 icon svg-ico1"></i>
+   						<i class="prime-ico2 icon svg-ico2"></i>
+   						<i class="prime-ico3 icon svg-ico3"></i>
+   					</div>
+   				</div>
+   				<img class="prime__img" src="product.png" alt="product" width="120">
+   			</div>
+   			<div class="prime-counter">
+   				<div class="container">
+   					<span class="prime-counter__text">
+   						Pospiesz się! Ograniczona oferta
+   					</span>
+   					<div class="counter js-countdown">
+   						<span class="counter__elem counter__elem1 js-count-digit">0</span>
+   						<span class="counter__elem js-count-digit">8</span>
+   						<span class="counter__elem js-count-digit">3</span>
+   					</div>
+   				</div>
+   			</div>	
+   			<div class="prime-right">
+   				<div class="timer">
+   					<span class="timer__title">
+   						Do końca promocji pozostało
+   					</span>
+   					<div class="timer-wrap">
+   						<div class="timer__item hours">15</div>&nbsp;:&nbsp;<div class="timer__item minutes">59</div>&nbsp;:&nbsp;<div class="timer__item seconds">39</div> 
+   					</div>
+   				</div>
+   				<div class="order-wrap">
+   					<div id="order-form2" class="order">
+   						<div class="order-head">
+   						<div class="discount"></div>
+   						<div class="price bb">
+   							<div class="price__old  price__old-crossed">
+                  <span class="al-raw-cost-promo price__old-cost">318</span>
+                  <span class="al-raw-currency price__old-currency">zł</span>
+                </div>
+                <div class="price__new">
+                  <span class="al-raw-cost price__new-cost">159</span>
+                  <span class="al-raw-currency price__new-currency">zł</span>
+                </div>
+   						</div>
+   						<h4 class="order__title">WYPEŁNIJ FORMULARZ, A MY SKONTAKTUJEMY SIĘ Z TOBĄ!</h4>
+   						</div>
+   						<iframe style="width: 100%; height: 252px; border:0;" id="order_form" src="https://ketonisa.site"></iframe>
+   					</div>
+   				</div>
+   			</div>
+   		</div>
+   	</div>
+   	<div class="prime__bottom"></div>
+   </section>
+<script src="main.js"></script>
+<script src="app.js"></script>
+
+<div id="al-modal" style="font-family: Helvetica,Arial,sans-serif; font-weight: 400; text-align: center; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border-radius: 10px; box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.16); display: none; left: 50%; margin-left: -200px; margin-top: -100px; opacity: 1; padding: 45px 40px 40px; position: fixed; top: 50%; width: 400px; z-index: 1000;"> <span class="al-modal-close" style="width: 21px; height: 21px; position: absolute; top: 10px; right: 10px; cursor: pointer; display: block;">×</span> <div id="al-modal-content" style="padding: 10px 0px 15px;"></div> <div class="al-modal-close" style="background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgb(53, 135, 13) 4%, rgb(41, 123, 0) 100%) repeat scroll 0px 0px; border: medium none; border-radius: 5px; box-shadow: 0px -1px 0px 0px rgb(13, 69, 9) inset, 0px 1px 1px 0px rgba(0, 0, 0, 0.22); color: rgb(255, 255, 255); cursor: pointer; display: block; text-align: center; text-decoration: none; font-size: 18px; height: 53px; line-height: 53px; margin: 0px auto; width: 235px;">OK</div> </div> <div id="al-modal-overlay" style="z-index: 999; position: fixed; background-color: rgb(239, 238, 233); opacity: 0.8; width: 100%; height: 100%; top: 0px; left: 0px; cursor: pointer; display: none;"></div><div class="footer" style="font: 400 16px/1 Helvetica,Arial,sans-serif; max-width: 100%; width: 100%; text-align: center; color: rgb(71, 71, 71); padding: 40px 0px; margin: 0px auto; background: rgb(255, 255, 255) none repeat scroll 0% 0%; direction: ltr; text-transform: none;"><div class="footer__in"><div class="footer__copyright">2020 Copyright. All rights reserved.</div><br><div class="footer__t"><span>©&nbsp;TerraLeads</span></div></div></div></body>
+</html>
